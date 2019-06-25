@@ -1,0 +1,4 @@
+@hourly /home/pi/freenom/freenom.sh -u akbal.tk -s home
+
+#* * * * *   /usr/bin/env > /home/pi/cron-env
+#@hourly cd /home/pi/partyLoud && tmux new-session -s partyloud '\''/home/pi/partyLoud/partyloud.sh'\''
