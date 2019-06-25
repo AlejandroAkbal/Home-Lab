@@ -18,7 +18,7 @@ This device is running Raspbian GNU/Linux 9.9 (stretch)
 
 - [x] **Fail2Ban** to protect the SSH access
 
-- [x] **vnstat** to view how much data is being used
+- [x] **vnStat** to view how much data is being used
 
 ```The SSH access to the RaspBerry is secured via an OpenSSH RSA 4k encrypted key with password.```
 
