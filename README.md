@@ -12,6 +12,8 @@ This device is running Raspbian GNU/Linux 9.9 (stretch)
 - [x] **[Party Loud Script](https://github.com/realtho/PartyLoud)**
 
 ### Apart from that is running:
+- [x] **Mosh** for SSH connection stability
+
 - [x] **Unattended upgrades** so its always up to date
 
 - [x] **UPNCP** for opening/redirecting ports on the router
