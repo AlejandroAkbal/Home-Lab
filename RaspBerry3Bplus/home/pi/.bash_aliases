@@ -6,8 +6,7 @@ fi
 alias tmux='tmux -2'
 
 # Archi Steam Farm
-alias steamabrir='tmux new -s "steam" /home/pi/scripts/ArchiSteamFarm' 
-alias sabrir='tmux new -s "steam" /home/pi/scripts/ArchiSteamFarm'
+alias steamabrir='tmux new -s "steam" /home/pi/Scripts/steam/ArchiSteamFarm'
 
 alias steam='tmux attach -t steam'
 
@@ -15,4 +14,4 @@ alias steam='tmux attach -t steam'
 alias torserver='sudo -u debian-tor arm'
 
 # PartyLoud
-alias party="cd /home/pi/partyLoud && tmux new-session -s partyloud '/home/pi/partyLoud/partyloud.sh'"
+alias party="cd /home/pi/Scripts/partyLoud && tmux new-session -s partyloud '/home/pi/Scripts/partyLoud/partyloud.sh'"

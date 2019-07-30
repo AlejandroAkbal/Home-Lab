@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 
-@hourly /home/pi/freenom.sh -u akbal.tk -s home
+@hourly /home/pi/Scripts/freenom/freenom.sh -u akbal.tk -s home
 
 #* * * * *   /usr/bin/env > /home/pi/cron-env
 
-@reboot /home/pi/scripts/party.cron
+@reboot /home/pi/Scripts/party.cron

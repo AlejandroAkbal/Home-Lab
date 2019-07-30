@@ -1,0 +1,18 @@
+#!/bin/bash
+# Sleep for 5 seconds. If you are starting more than one tmux session
+#   "at the same time", then make sure they all sleep for different periods
+#   or you can experience problems
+/bin/sleep 270
+
+# Ensure the environment is available
+source /home/pi/.bashrc
+
+# Create a new tmux session named party...
+/usr/bin/tmux new-session -d -s party
+
+# ...and control the tmux session (initially ensure the environment
+#   is available, then run commands)
+/usr/bin/tmux send-keys -t party "source /home/pi/.bashrc" C-m
+/usr/bin/tmux send-keys -t party "echo \"Funciona\"" C-m
+/usr/bin/tmux send-keys -t party "cd /home/pi/partyLoud/" C-m
+/usr/bin/tmux send-keys -t party "/home/pi/partyLoud/partyloud.sh" C-m
