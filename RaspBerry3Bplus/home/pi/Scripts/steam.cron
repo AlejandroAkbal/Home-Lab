@@ -12,5 +12,10 @@ source /home/pi/.bashrc
 
 # ...and control the tmux session (initially ensure the environment
 #   is available, then run commands)
-/bin/sleep 120
+/usr/bin/tmux send-keys -t steam "cd /home/pi/Scripts/steam" C-m
+/usr/bin/tmux send-keys -t steam "/home/pi/Scripts/steam/ArchiSteamFarm" C-m
+
+# Wait for ASF to initialize
+/bin/sleep 60
+
 /usr/bin/tmux send-keys -t steam "c play Alejandrorr7 Eden la chupa" C-m
