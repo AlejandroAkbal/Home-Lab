@@ -5,3 +5,4 @@ SHELL=/bin/bash
 #* * * * *   /usr/bin/env > /home/pi/cron-env
 
 @reboot /home/pi/Scripts/party.cron
+@reboot /home/pi/Scripts/steam.cron

@@ -1,0 +1,16 @@
+#!/bin/bash
+# Sleep for 5 seconds. If you are starting more than one tmux session
+#   "at the same time", then make sure they all sleep for different periods
+#   or you can experience problems
+/bin/sleep 170
+
+# Ensure the environment is available
+source /home/pi/.bashrc
+
+# Create a new tmux session named party...
+/usr/bin/tmux new-session -d -s steam
+
+# ...and control the tmux session (initially ensure the environment
+#   is available, then run commands)
+/bin/sleep 120
+/usr/bin/tmux send-keys -t steam "c play Alejandrorr7 Eden la chupa" C-m
