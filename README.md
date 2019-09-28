@@ -1,5 +1,5 @@
 # Home Lab
-What I have built on my devices at home
+What I have built on my devices at home, and common scripts I use
 
 ## RaspBerry 3B+
 This device is running Raspbian GNU/Linux 9.9 (stretch) 
