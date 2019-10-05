@@ -1,0 +1,25 @@
+#!/bin/bash
+file="$HOME/temperature.log"
+date=$(date +"%d/%m/%Y")
+
+# Separator (cause my raspberry shutdowns every night)
+{
+    printf "%s\n" ""
+    printf "%-15s%5s\n" "TIMESTAMP" "TEMPERATURE"
+    printf "%s\n" ""
+    printf "%-7s%0s\n" "" "$date"
+    printf "%s\n" ""
+}  >> "$file"
+
+# Loop that adds to the file
+while true 
+do
+
+temperature=$(vcgencmd measure_temp | grep -E -o '[0-9]*\.[0-9]*')
+timestamp=$(date +"%T")
+
+printf "%-15s%5s\n" "$timestamp" "$temperature" >> "$file"
+
+sleep 60
+
+done

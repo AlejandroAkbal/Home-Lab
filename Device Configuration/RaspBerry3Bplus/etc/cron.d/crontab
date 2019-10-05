@@ -6,3 +6,4 @@ SHELL=/bin/bash
 
 @reboot /home/pi/Scripts/party.cron
 @reboot /home/pi/Scripts/steam.cron
+@reboot /home/pi/Scripts/temperatures.cron
