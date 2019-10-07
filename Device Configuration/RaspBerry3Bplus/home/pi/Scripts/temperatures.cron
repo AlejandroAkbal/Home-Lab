@@ -1,6 +1,7 @@
 #!/bin/bash
 file="$HOME/temperature.log"
 date=$(date +"%d/%m/%Y")
+lastTemperature=40
 
 # Separator (cause my raspberry shutdowns every night)
 {
@@ -9,17 +10,24 @@ date=$(date +"%d/%m/%Y")
     printf "%s\n" ""
     printf "%-7s%0s\n" "" "$date"
     printf "%s\n" ""
-}  >> "$file"
+} >>"$file"
 
 # Loop that adds to the file
-while true 
-do
+while true; do
 
-temperature=$(vcgencmd measure_temp | grep -E -o '[0-9]*\.[0-9]*')
-timestamp=$(date +"%T")
+    temperature=$(vcgencmd measure_temp | grep -E -o '[0-9]*\.[0-9]*')
+    timestamp=$(date +"%T")
 
-printf "%-15s%5s\n" "$timestamp" "$temperature" >> "$file"
+    printf "%-15s%5s\n" "$timestamp" "$temperature" >>"$file"
 
-sleep 60
+    # Check for highest temperature (NEEDS "bc" PACKAGE!!!)
+    if (($(echo "$temperature > $lastTemperature" | bc -l))); then
+
+        lastTemperature=$temperature
+        printf "%-15s%5s\n" "Highest temperature:" "$temperature" >>"$file"
+
+    fi
+
+    sleep 300
 
 done
