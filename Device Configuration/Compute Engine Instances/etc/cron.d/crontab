@@ -1,2 +1,0 @@
-*/5 * * * * goaccess /var/log/apache2/access.log --log-format=COMBINED -a -o /webroot/old.akbal.dev/stats/index.html
-*/5 * * * * goaccess /var/log/nginx/akbal.dev-access.log -a -o /webroot/akbal.dev/stats/index.html --log-format=COMBINED
