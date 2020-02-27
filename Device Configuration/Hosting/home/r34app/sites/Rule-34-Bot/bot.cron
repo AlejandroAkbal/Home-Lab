@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Sleep for 5 seconds
+/bin/sleep 5
+
+# Create a new tmux session named party...
+/usr/bin/tmux new-session -d -s r34bot 'python3 /home/r34app/sites/Rule-34-Bot/main.py -s'
