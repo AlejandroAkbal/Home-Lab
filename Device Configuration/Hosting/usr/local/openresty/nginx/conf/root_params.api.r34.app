@@ -4,3 +4,8 @@
 # rewrite ^/users/(.*)$ /show?user=$1? last;
 # rewrite_log off;
 
+# Cache
+proxy_cache response_zone;
+proxy_cache_min_uses 3;
+proxy_cache_lock on;
+add_header X-Proxy-Cache $upstream_cache_status;
