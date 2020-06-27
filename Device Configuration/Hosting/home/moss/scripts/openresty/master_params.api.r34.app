@@ -1,3 +1,5 @@
+# Custom configuration file 
+
 # Cache
 # https://docs.nginx.com/nginx/admin-guide/content-cache/content-caching/
 # https://www.nginx.com/blog/nginx-caching-guide/
